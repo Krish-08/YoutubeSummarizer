@@ -1,0 +1,6 @@
+spacy
+flask
+json
+youtube_api_transcript
+string
+heapq
