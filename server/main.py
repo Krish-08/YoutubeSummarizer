@@ -1,7 +1,7 @@
 
 
 from flask import render_template, request ,Flask
-import getTranscript
+import getTranscript as getTranscript
 
 
 

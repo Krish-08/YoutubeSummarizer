@@ -5,7 +5,7 @@ import json
 
 from youtube_transcript_api.formatters import TextFormatter
 
-import summarizer
+import summarizer as summarizer
 class gettranscript:
     def __init__(self):
         pass
