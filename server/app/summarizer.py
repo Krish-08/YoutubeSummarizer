@@ -6,7 +6,7 @@ from heapq import nlargest
 
 class summary:
     def __init__(self) -> None:
-        # spacy.cli.download("en_core_web_sm")
+        spacy.cli.download("en_core_web_sm")
         pass
     def getSummary(self,text,percentage):
         

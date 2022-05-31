@@ -5,7 +5,7 @@ import json
 
 from youtube_transcript_api.formatters import TextFormatter
 
-import summarizer as summarizer
+from . import  summarizer
 class gettranscript:
     def __init__(self):
         pass
@@ -26,13 +26,13 @@ class gettranscript:
             else:
                 id=link.split('/')[3]
             print(id)
-            script=YouTubeTranscriptApi.get_transcript(id)
+            script=YouTubeTranscriptApi.get_transcript(id,['en'])
             formatter = TextFormatter()
             scriptText = formatter.format_transcript(script)
             # print("before Summary")
             print(len(script))
             print(len(scriptText))
-            print(len(obj.getSummary(scriptText,0.1)))
+            print(len(obj.getSummary(scriptText,0.5)))
             max_duration=max(30,script[-1]["start"]//5)
             print(max_duration)
             ctr,end,start=0,0,0
@@ -53,7 +53,7 @@ class gettranscript:
                         {
                             "start":self.StringTime(start),
                             "end":self.StringTime(end),
-                            "text":obj.getSummary(blockText,0.1)
+                            "text":obj.getSummary(blockText,0.3)
                         }
                     )
                     start=end
@@ -65,7 +65,7 @@ class gettranscript:
                 {
                     "start":self.StringTime(start),
                     "end":self.StringTime(end),
-                    "text":obj.getSummary(blockText,0.1)
+                    "text":obj.getSummary(blockText,0.5)
                 }
                 
             )

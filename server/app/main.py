@@ -1,11 +1,9 @@
-
-
+from . import getTranscript
 from flask import render_template, request ,Flask
-import getTranscript as getTranscript
 
 
 
-app=Flask(__name__)
+app=Flask(__name__,template_folder='../templates')
 
 @app.route("/")
 

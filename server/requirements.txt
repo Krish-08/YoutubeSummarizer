@@ -1,6 +1,4 @@
 spacy
 flask
-json
-youtube_api_transcript
-string
-heapq
+youtube-transcript-api==0.4.1
+gunicorn
