@@ -1,4 +1,5 @@
 .summary_box{
+    background-color: white;
     overflow-y: auto;
     max-height: 30em;  
     width: inherit; 
